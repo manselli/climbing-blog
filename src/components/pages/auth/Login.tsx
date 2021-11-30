@@ -34,7 +34,7 @@ export default function Login() {
         <Container className="mt-3 d-flex justify-content-center">
         <Card style={{ width: '30rem' }}>
             <Card.Body>
-                <h3 className="text-center">Sign Up</h3>
+                <h3 className="text-center">Log In</h3>
                 <ErrorText text={error} />
                 <Form>
                     <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
