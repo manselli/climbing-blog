@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
 import { useNavigate, Link } from 'react-router-dom';
 import ErrorText from '../../ErrorText';
+import {auth }from './../../config/Firebase';
+
 
 export default function Signup() {
 
@@ -9,10 +11,27 @@ export default function Signup() {
     const [password, setPassword] = useState<string>('');
     const [passwordConfirm, setPasswordConfirm] = useState<string>('');
     const [error, setError] = useState<string>('');
+    const history= useNavigate();
 
     function signupWithEmailAndPsswd(): void {
-        //password check
-        //auth.createUserWithEmailAndPassword(email,password) ... with .then(..)   .catch(..)
+      if(password !== passwordConfirm){setError('Le password non corrispondono'); return }
+      if (error !== '' ){setError('')};
+      auth.createUserWithEmailAndPassword(email,password)
+      .then(result => {
+          console.log(result);                      
+          history('/climbing-blog/login');
+      })
+      .catch(error =>{
+          console.error(error);
+          if(error.code.includes('auth/weak-password')){
+              setError('Please enter a strongher password.');
+          }else if(error.code.includes('auth/email-already-in-use')){
+              setError('email already in use');
+          } else{
+              setError('Unable to register please try again later.')
+          }
+
+      })
     }
     
     

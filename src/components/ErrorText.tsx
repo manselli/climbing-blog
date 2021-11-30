@@ -1,12 +1,13 @@
 import React from 'react'
+import { Alert } from 'react-bootstrap';
 
 export default function ErrorText(props:{text:string}) {
 
     if (props.text==='') return null;
 
     return (
-        <div>
-            {props.text}
-        </div>
+        <Alert className="text-center" variant={'danger'}>
+    {props.text}
+  </Alert>
     )
 }
