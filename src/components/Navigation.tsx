@@ -12,13 +12,13 @@ function Navigation() {
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
       <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/">Home</NavLink></Nav.Link>
-      <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/about">about</NavLink></Nav.Link>
-      <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/contact">contact</NavLink></Nav.Link>
+      <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/about">About</NavLink></Nav.Link>
+      <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/contact">Contact</NavLink></Nav.Link>
       
     </Nav>
     <Nav>
-      <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/login">login</NavLink></Nav.Link>
-      <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/signup">signup</NavLink></Nav.Link>
+      <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/login">Login</NavLink></Nav.Link>
+      <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/signup">Signup</NavLink></Nav.Link>
     </Nav>
   </Navbar.Collapse>
   </Container>
