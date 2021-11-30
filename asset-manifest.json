@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/climbing-blog/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/climbing-blog/static/js/main.17e7d858.chunk.js",
-    "main.js.map": "/climbing-blog/static/js/main.17e7d858.chunk.js.map",
+    "main.css": "/climbing-blog/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/climbing-blog/static/js/main.335e0b9a.chunk.js",
+    "main.js.map": "/climbing-blog/static/js/main.335e0b9a.chunk.js.map",
     "runtime-main.js": "/climbing-blog/static/js/runtime-main.bb9484cd.js",
     "runtime-main.js.map": "/climbing-blog/static/js/runtime-main.bb9484cd.js.map",
     "static/css/2.383c0125.chunk.css": "/climbing-blog/static/css/2.383c0125.chunk.css",
-    "static/js/2.d00907dd.chunk.js": "/climbing-blog/static/js/2.d00907dd.chunk.js",
-    "static/js/2.d00907dd.chunk.js.map": "/climbing-blog/static/js/2.d00907dd.chunk.js.map",
+    "static/js/2.f412d9cf.chunk.js": "/climbing-blog/static/js/2.f412d9cf.chunk.js",
+    "static/js/2.f412d9cf.chunk.js.map": "/climbing-blog/static/js/2.f412d9cf.chunk.js.map",
     "index.html": "/climbing-blog/index.html",
     "static/css/2.383c0125.chunk.css.map": "/climbing-blog/static/css/2.383c0125.chunk.css.map",
-    "static/css/main.6dea0f05.chunk.css.map": "/climbing-blog/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.d00907dd.chunk.js.LICENSE.txt": "/climbing-blog/static/js/2.d00907dd.chunk.js.LICENSE.txt",
+    "static/css/main.8c8b27cf.chunk.css.map": "/climbing-blog/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.f412d9cf.chunk.js.LICENSE.txt": "/climbing-blog/static/js/2.f412d9cf.chunk.js.LICENSE.txt",
     "static/media/logo.fbd408da.png": "/climbing-blog/static/media/logo.fbd408da.png"
   },
   "entrypoints": [
     "static/js/runtime-main.bb9484cd.js",
     "static/css/2.383c0125.chunk.css",
-    "static/js/2.d00907dd.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.17e7d858.chunk.js"
+    "static/js/2.f412d9cf.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.335e0b9a.chunk.js"
   ]
 }
