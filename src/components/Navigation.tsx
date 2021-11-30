@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import Logo from './logo.png'
 
 function Navigation() {
   return (  
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="/climbing-blog/">React-Bootstrap</Navbar.Brand>
+  <Navbar.Brand href="/climbing-blog/"><img src={Logo} alt="" height="45px" /></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
