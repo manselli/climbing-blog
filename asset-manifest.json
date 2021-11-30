@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/climbing-blog/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/climbing-blog/static/js/main.f64aec96.chunk.js",
-    "main.js.map": "/climbing-blog/static/js/main.f64aec96.chunk.js.map",
+    "main.js": "/climbing-blog/static/js/main.ffa6a663.chunk.js",
+    "main.js.map": "/climbing-blog/static/js/main.ffa6a663.chunk.js.map",
     "runtime-main.js": "/climbing-blog/static/js/runtime-main.bb9484cd.js",
     "runtime-main.js.map": "/climbing-blog/static/js/runtime-main.bb9484cd.js.map",
     "static/css/2.383c0125.chunk.css": "/climbing-blog/static/css/2.383c0125.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.383c0125.chunk.css",
     "static/js/2.10401cff.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.f64aec96.chunk.js"
+    "static/js/main.ffa6a663.chunk.js"
   ]
 }
