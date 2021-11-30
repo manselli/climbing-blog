@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/climbing-blog/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/climbing-blog/static/js/main.5a8f5cab.chunk.js",
-    "main.js.map": "/climbing-blog/static/js/main.5a8f5cab.chunk.js.map",
+    "main.js": "/climbing-blog/static/js/main.554b4236.chunk.js",
+    "main.js.map": "/climbing-blog/static/js/main.554b4236.chunk.js.map",
     "runtime-main.js": "/climbing-blog/static/js/runtime-main.bb9484cd.js",
     "runtime-main.js.map": "/climbing-blog/static/js/runtime-main.bb9484cd.js.map",
     "static/css/2.383c0125.chunk.css": "/climbing-blog/static/css/2.383c0125.chunk.css",
-    "static/js/2.10401cff.chunk.js": "/climbing-blog/static/js/2.10401cff.chunk.js",
-    "static/js/2.10401cff.chunk.js.map": "/climbing-blog/static/js/2.10401cff.chunk.js.map",
+    "static/js/2.d00907dd.chunk.js": "/climbing-blog/static/js/2.d00907dd.chunk.js",
+    "static/js/2.d00907dd.chunk.js.map": "/climbing-blog/static/js/2.d00907dd.chunk.js.map",
     "index.html": "/climbing-blog/index.html",
     "static/css/2.383c0125.chunk.css.map": "/climbing-blog/static/css/2.383c0125.chunk.css.map",
     "static/css/main.6dea0f05.chunk.css.map": "/climbing-blog/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.10401cff.chunk.js.LICENSE.txt": "/climbing-blog/static/js/2.10401cff.chunk.js.LICENSE.txt"
+    "static/js/2.d00907dd.chunk.js.LICENSE.txt": "/climbing-blog/static/js/2.d00907dd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bb9484cd.js",
     "static/css/2.383c0125.chunk.css",
-    "static/js/2.10401cff.chunk.js",
+    "static/js/2.d00907dd.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.5a8f5cab.chunk.js"
+    "static/js/main.554b4236.chunk.js"
   ]
 }
