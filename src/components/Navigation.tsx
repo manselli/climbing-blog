@@ -1,9 +1,32 @@
-import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import React, { useContext, useEffect, useState } from "react";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { IUser } from "../App";
 import Logo from './logo.png'
+import { UserContext } from "./user/UserContext";
 
 function Navigation() {
+const context = useContext(UserContext);
+let jsxelement;
+const [refresh, setRefresh] = useState<number>(1)
+
+if(context.state.email===undefined){
+  console.log('nessun utente');
+  jsxelement=(<>
+         <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/login">Login</NavLink></Nav.Link>
+         <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/signup">Signup</NavLink></Nav.Link>
+              </>)
+} else{
+  console.log('utente: ' +context.state.email);
+
+  jsxelement=(<>
+    <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/user">{context.state.email}</NavLink></Nav.Link>
+    <Button onClick={()=>{context.setState({} as IUser);
+                          setRefresh(1); }}>Logout</Button>
+    </>)
+}
+
+
   return (  
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
@@ -17,8 +40,7 @@ function Navigation() {
       
     </Nav>
     <Nav>
-      <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/login">Login</NavLink></Nav.Link>
-      <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/signup">Signup</NavLink></Nav.Link>
+      {jsxelement}
     </Nav>
   </Navbar.Collapse>
   </Container>

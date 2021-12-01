@@ -1,12 +1,14 @@
 import { setupMaster } from 'cluster';
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
 import { useNavigate, Link } from 'react-router-dom';
 import ErrorText from '../../ErrorText';
+import { UserContext } from '../../user/UserContext';
 import {auth }from './../../config/Firebase';
 
 
 export default function Login() {
+  const context = useContext(UserContext);
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
@@ -16,8 +18,9 @@ export default function Login() {
     function loginWithEmailAndPsswd(): void {
         if(error !== '') setError('');
         auth.signInWithEmailAndPassword(email,password)
-        .then(result=>{
+        .then(async result=>{
            console.log(result);  
+           context.setState({email:email})
            
            history('/climbing-blog/');
         })

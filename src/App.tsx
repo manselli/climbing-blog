@@ -9,11 +9,23 @@ import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Signup from './components/pages/auth/Signup';
 import Login from './components/pages/auth/Login';
+import { UserContext } from './components/user/UserContext';
 
+export interface IUser{
+  email:string|null;
+}
+export interface IContextProps {
+  state: IUser;
+  setState: React.Dispatch<React.SetStateAction<IUser>>;
+}
 
 function App() {
+  const [currentUser, setCurrentUser] = useState<IUser>({} as IUser);
+  const value:IContextProps={ state:currentUser, setState:setCurrentUser };
+
   return (
     <>
+    <UserContext.Provider value={value}>
     <Navigation />
     <Routes>
       <Route path="/climbing-blog/" element={<Home />} />
@@ -22,9 +34,12 @@ function App() {
       <Route path="/climbing-blog/login" element={<Login />} />
       <Route path="/climbing-blog/signup" element={<Signup />} />
     </Routes>
+    </UserContext.Provider>
     <Footer />
     </>
   );
 }
 
 export default App;
+
+
