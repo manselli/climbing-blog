@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { IUser } from "../App";
 import Logo from './logo.png'
 import { UserContext } from "./user/UserContext";
@@ -8,7 +8,7 @@ import { UserContext } from "./user/UserContext";
 function Navigation() {
 const context = useContext(UserContext);
 let jsxelement;
-const [refresh, setRefresh] = useState<number>(1)
+const history= useNavigate();
 
 if(context.state.email===undefined){
   console.log('nessun utente');
@@ -21,8 +21,8 @@ if(context.state.email===undefined){
 
   jsxelement=(<>
     <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/user">{context.state.email}</NavLink></Nav.Link>
-    <Button onClick={()=>{context.setState({} as IUser);
-                          setRefresh(1); }}>Logout</Button>
+    <Button onClick={()=>{context.setState({} as IUser);                           
+           history('/climbing-blog/');}}>Logout</Button>
     </>)
 }
 

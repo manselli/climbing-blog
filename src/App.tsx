@@ -10,6 +10,7 @@ import Contact from './components/pages/Contact';
 import Signup from './components/pages/auth/Signup';
 import Login from './components/pages/auth/Login';
 import { UserContext } from './components/user/UserContext';
+import UserPage from './components/user/UserPage';
 
 export interface IUser{
   email:string|null;
@@ -33,6 +34,7 @@ function App() {
       <Route path="/climbing-blog/contact" element={<Contact />} />
       <Route path="/climbing-blog/login" element={<Login />} />
       <Route path="/climbing-blog/signup" element={<Signup />} />
+      <Route path="/climbing-blog/user" element={<UserPage />} />
     </Routes>
     </UserContext.Provider>
     <Footer />
