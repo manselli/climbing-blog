@@ -7,6 +7,7 @@ import {auth }from './../../config/Firebase';
 
 export default function Signup() {
 
+    const [userName, setUserName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [passwordConfirm, setPasswordConfirm] = useState<string>('');
@@ -18,7 +19,16 @@ export default function Signup() {
       if (error !== '' ){setError('')};
       auth.createUserWithEmailAndPassword(email,password)
       .then(result => {
-          console.log(result);                      
+          console.log(result);
+          let nameOfUser:string;
+          if (userName==''){
+            nameOfUser=email.slice(0,email.indexOf('@'));
+          } else {
+            nameOfUser=userName;
+          }
+          result.user?.updateProfile({
+            displayName:nameOfUser
+          })
           history('/climbing-blog/login');
       })
       .catch(error =>{
@@ -43,6 +53,14 @@ export default function Signup() {
                 <h3 className="text-center">Sign Up</h3>
                 <ErrorText text={error} />
                 <Form>
+                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+                      <Form.Label column sm={3}>
+                         Username
+                      </Form.Label>
+                      <Col sm={9}>
+                        <Form.Control type="email" placeholder="default Example ̷@̷e̷m̷a̷i̷l̷.̷c̷o̷m̷" onChange={event => setUserName(event.target.value)}/>
+                      </Col>
+                    </Form.Group>
                     <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
                       <Form.Label column sm={3}>
                          Email

@@ -11,17 +11,18 @@ import Signup from './components/pages/auth/Signup';
 import Login from './components/pages/auth/Login';
 import { UserContext } from './components/user/UserContext';
 import UserPage from './components/user/UserPage';
+import firebase from 'firebase/compat/app';
 
 export interface IUser{
   email:string|null;
 }
 export interface IContextProps {
-  state: IUser;
-  setState: React.Dispatch<React.SetStateAction<IUser>>;
+  state: firebase.User|null;
+  setState: React.Dispatch<React.SetStateAction<firebase.User|null>>;
 }
 
 function App() {
-  const [currentUser, setCurrentUser] = useState<IUser>({} as IUser);
+  const [currentUser, setCurrentUser] = useState<firebase.User|null>(null);
   const value:IContextProps={ state:currentUser, setState:setCurrentUser };
 
   return (

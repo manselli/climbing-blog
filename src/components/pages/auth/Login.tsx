@@ -18,9 +18,9 @@ export default function Login() {
     function loginWithEmailAndPsswd(): void {
         if(error !== '') setError('');
         auth.signInWithEmailAndPassword(email,password)
-        .then(async result=>{
-           console.log(result);  
-           context.setState({email:email})
+        .then(result=>{
+           console.log(result.user);  
+           context.setState(result.user)
            
            history('/climbing-blog/');
         })

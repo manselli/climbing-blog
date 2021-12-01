@@ -10,7 +10,7 @@ const context = useContext(UserContext);
 let jsxelement;
 const history= useNavigate();
 
-if(context.state.email===undefined){
+if(context.state===null){
   console.log('nessun utente');
   jsxelement=(<>
          <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/login">Login</NavLink></Nav.Link>
@@ -21,8 +21,8 @@ if(context.state.email===undefined){
 
   jsxelement=(<>
     <Nav.Link href="#features"><NavLink className="nav-link" to="/climbing-blog/user">{context.state.email}</NavLink></Nav.Link>
-    <Button onClick={()=>{context.setState({} as IUser);                           
-           history('/climbing-blog/');}}>Logout</Button>
+    <Button onClick={()=>{context.setState(null);                           
+           window.location.href="/climbing-blog/";}}>Logout</Button>
     </>)
 }
 
@@ -49,79 +49,3 @@ if(context.state.email===undefined){
 }
 
 export default Navigation;
-
-/**
- *   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/climbing-blog/">
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/climbing-blog/about">
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/climbing-blog/contact">
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/climbing-blog/login">
-                Login
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/climbing-blog/signup">
-               Signup
-              </NavLink>
-            </li>
-          </ul>
-    </div>
-  </div>
-</nav>
- * 
- * 
- * 
- * 
- 
-    <div className="navigation">
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <div className="container">
-          <NavLink className="navbar-brand" to="/climbing-blog/">
-            React Multi-Page Website
-          </NavLink>
-          <div>
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/climbing-blog/">
-                  Home
-                  <span className="sr-only">(current)</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/climbing-blog/about">
-                  About
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/climbing-blog/contact">
-                  Contact
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
- */
